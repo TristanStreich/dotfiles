@@ -1,0 +1,19 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+- link:
+    ~/.tmux.conf: dotfiles/tmux.conf
+    ~/.vimrc: dotfiles/vimrc
+    ~/.bash_profile: dotfiles/bash_profile
+- create:
+    - ~/.vim/autoload 
+    - ~/.vim/backup 
+    - ~/.vim/colors 
+    - ~/.vim/plugged
+- shell:
+    - [ "source ~/.bash_profile", "Reload bash profile" ]
+    - [ "vim +PlugInstall +qall", "Install vim plugins" ]
+    - [ "git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm", "Install Tmux plugin manager" ]
+    - [ "if tmux has-session 2>/dev/null; then tmux source ~/.tmux.conf; fi", "Source tmux conf" ]
+    - [ "~/.tmux/plugins/tpm/bin/install_plugins", "Install tmux plugins" ]
