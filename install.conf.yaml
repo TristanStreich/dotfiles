@@ -2,6 +2,7 @@
     link:
       create: true
       relink: true
+      force: true
 - link:
     ~/.tmux.conf: dotfiles/tmux.conf
     ~/.vimrc: dotfiles/vimrc
