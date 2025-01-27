@@ -10,12 +10,20 @@ bind '"\e[B": history-search-forward'
 export PATH=~/Library/Python/3.9/bin:$PATH
 export TERM=xterm-256color
 
-source ~/.bashrc
+source_if_exists() {
+    if [ -f $1 ]; then
+    source $1
+fi
+}
+
+export PS1='\[\e[1;34m\]\u\[\e[0m\]@\[\e[1;36m\]\h\[\e[0m\]:\[\e[1;32m\]\w\[\e[0m\] \$ '
+
+source_if_exists ~/.bashrc
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-. "$HOME/.cargo/env"
+source_if_exists "$HOME/.cargo/env"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
