@@ -17,7 +17,7 @@ source_if_exists() {
     fi
 }
 
-export PS1='\[\e[1;34m\]\u\[\e[0m\]@\[\e[1;36m\]\h\[\e[0m\]:\[\e[1;32m\]\w\[\e[0m\] \$ '
+export PS1='\[\e[1;32m\]\u@\h\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\] \$ '
 
 source_if_exists ~/.bashrc
 
