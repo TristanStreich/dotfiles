@@ -9,11 +9,12 @@ bind '"\e[B": history-search-forward'
 
 export PATH=~/Library/Python/3.9/bin:$PATH
 export TERM=xterm-256color
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 source_if_exists() {
     if [ -f $1 ]; then
-    source $1
-fi
+        source $1
+    fi
 }
 
 export PS1='\[\e[1;34m\]\u\[\e[0m\]@\[\e[1;36m\]\h\[\e[0m\]:\[\e[1;32m\]\w\[\e[0m\] \$ '
