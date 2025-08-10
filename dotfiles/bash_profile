@@ -4,6 +4,7 @@ alias dns='dscacheutil -flushcache;sudo killall -HUP mDNSResponder'
 alias k='kubectl'
 alias xargs='xargs '
 alias fix_brackets="printf '\e[?2004l'"
+alias minecraft_screenshots=' open "$HOME/Library/Application Support/minecraft/screenshots"'
 
 source_if_exists() {
     if [ -f $1 ]; then
