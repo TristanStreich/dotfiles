@@ -36,3 +36,4 @@ if [ -f /opt/homebrew/bin/brew ]; then
 fi
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc # ghcup-env
+. "$HOME/.cargo/env"
