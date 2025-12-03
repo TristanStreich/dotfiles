@@ -12,6 +12,9 @@ source_if_exists() {
     fi
 }
 
+# enable * patterns
+shopt -s globstar
+
 # any machine specific changes not to be committed
 source_if_exists ~/.bash_profile_local
 
