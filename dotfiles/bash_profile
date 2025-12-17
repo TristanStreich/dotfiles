@@ -5,6 +5,7 @@ alias k='kubectl'
 alias xargs='xargs '
 alias fix_brackets="printf '\e[?2004l'"
 alias minecraft_screenshots=' open "$HOME/Library/Application Support/minecraft/screenshots"'
+alias bell="printf '\a'"
 
 source_if_exists() {
     if [ -f $1 ]; then
