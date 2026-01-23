@@ -1,0 +1,11 @@
+# Vim swap files
+*.swp
+*.swo
+*.swn
+*~
+
+# Vim session files
+Session.vim
+
+# Temporary files
+.*.sw[a-p]

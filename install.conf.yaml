@@ -7,6 +7,7 @@
     ~/.tmux.conf: dotfiles/tmux.conf
     ~/.vimrc: dotfiles/vimrc
     ~/.bash_profile: dotfiles/bash_profile
+    ~/.gitignore_global: dotfiles/gitignore_global
 - create:
     - ~/.vim/autoload 
     - ~/.vim/backup 
@@ -18,3 +19,4 @@
     - [ "[ -d ~/.tmux/plugins/tpm ] || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm", "Install Tmux plugin manager" ]
     - [ "if tmux has-session 2>/dev/null; then tmux source ~/.tmux.conf; fi", "Source tmux conf" ]
     - [ "~/.tmux/plugins/tpm/bin/install_plugins", "Install tmux plugins" ]
+    - [ "git config --global core.excludesfile ~/.gitignore_global", "Configure global gitignore" ]
