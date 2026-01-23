@@ -55,6 +55,9 @@ call plug#end()
 
 " Fuzzy find with ctrl-p
 nnoremap <C-p> :Files<CR>
+" So this makes it so if I try to fuzzy find in the nerdtree window I will not
+" open the file in the nerdtree window
+autocmd FileType nerdtree noremap <buffer> <C-p> :wincmd p<CR>:Files<CR>
 
 " Editor colors
 set termguicolors       " Enable true colors support
