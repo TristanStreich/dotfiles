@@ -46,8 +46,15 @@ call plug#begin()
 
     " File explorer
     Plug 'preservim/nerdtree'
+    " Fuzzy find
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+
 
 call plug#end()
+
+" Fuzzy find with ctrl-p
+nnoremap <C-p> :Files<CR>
 
 " Editor colors
 set termguicolors       " Enable true colors support
