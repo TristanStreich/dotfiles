@@ -25,6 +25,8 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in
 
 " Start NERDTree. If a file is specified, move the cursor to its window.
 autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+" Mirror NERDTree in new tabs
+autocmd BufWinEnter * if &filetype != 'nerdtree' && exists('t:NERDTreeBufName') == 0 && getbufvar(winbufnr(1), '&filetype') != 'nerdtree' | NERDTreeMirror | wincmd p | endif
 
 " Plugin Auto Install
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
