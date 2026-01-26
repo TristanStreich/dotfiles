@@ -12,6 +12,9 @@ filetype indent on
 
 let mapleader = " "
 
+" use better regex engine for syntax highlighting
+set re=0
+
 " Start NERDTree and put the cursor back in the other window.
 " autocmd VimEnter * NERDTree | wincmd p
 
